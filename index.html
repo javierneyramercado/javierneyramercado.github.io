@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Javier Neyra Mercado – Certificados</title>
+<meta name="description" content="Certificados de Javier Neyra Mercado, Técnico Líder de Andamios y Capataz Andamiero. Persona Competente en Andamios de Sistema (SAIA).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#1e2b36;
+  --steel-2:#33454f;
+  --zinc:#e8ebed;
+  --paper:#f7f8f8;
+  --line:#c5ccd1;
+  --safety:#e4690f;
+  --safety-dark:#b04f08;
+  --ok:#2f7d4f;
+  --head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:1.0625rem;line-height:1.6;color:var(--steel);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--safety);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+
+/* Hero: rejilla de andamio */
+.hero{
+  background-color:var(--steel);color:#fff;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:56px 56px;
+  padding:4.5rem 0 4rem;
+  border-bottom:8px solid var(--safety);
+}
+.hero h1{font-family:var(--head);font-weight:700;font-size:clamp(2.8rem,9vw,5.6rem);line-height:.95;margin:0 0 .6rem;letter-spacing:.01em}
+.hero .rol{font-family:var(--head);font-weight:600;font-size:clamp(1.3rem,3.4vw,1.9rem);color:#ffb274;margin:0 0 1.5rem}
+.hero p{max-width:60ch;margin:0 0 1.75rem;color:#dbe2e7}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.25rem;border-radius:3px;font-weight:600;text-decoration:none;border:2px solid #fff;color:#fff;transition:background .15s,color .15s}
+.btn:hover{background:#fff;color:var(--steel)}
+.btn.primary{background:var(--safety);border-color:var(--safety)}
+.btn.primary:hover{background:var(--safety-dark);border-color:var(--safety-dark);color:#fff}
+
+/* Datos rápidos */
+.datos{background:var(--zinc);border-bottom:1px solid var(--line)}
+.datos ul{list-style:none;margin:0;padding:1.1rem 0;display:flex;flex-wrap:wrap;gap:.5rem 2.2rem}
+.datos li{font-weight:500}
+.datos li span{color:var(--steel-2);font-weight:400}
+
+/* Certificados */
+section{padding:3.5rem 0}
+h2{font-family:var(--head);font-size:clamp(2rem,5vw,2.8rem);margin:0 0 .4rem;line-height:1.05}
+.sub{margin:0 0 2rem;color:var(--steel-2);max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.4rem}
+
+/* Cada certificado es una tarjeta tipo tarjeta de inspección */
+.cert{background:#fff;border:1px solid var(--line);border-top:6px solid var(--ok);border-radius:4px;display:flex;flex-direction:column}
+.cert .vista{aspect-ratio:4/3;background:var(--zinc);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);overflow:hidden;cursor:pointer;padding:0;border-left:0;border-right:0;border-top:0;width:100%}
+.cert .vista img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.cert .vacio{padding:1rem;text-align:center;color:var(--steel-2);font-size:.95rem}
+.cert .vacio b{display:block;font-family:var(--head);font-size:1.5rem;color:var(--steel)}
+.cert .cuerpo{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.cert h3{font-family:var(--head);font-size:1.5rem;line-height:1.1;margin:0}
+.cert .emisor{margin:0;color:var(--steel-2);font-size:.98rem}
+.cert .meta{margin:auto 0 0;padding-top:.7rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem;font-size:.95rem}
+.cert .anio{font-family:var(--head);font-weight:700;font-size:1.35rem}
+.cert a.ver,.cert button.ver{font:inherit;font-weight:600;color:var(--safety-dark);background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+/* Visor */
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,980px);width:100%}
+dialog::backdrop{background:rgba(15,22,28,.88)}
+dialog .caja{position:relative}
+dialog img{display:block;max-width:100%;max-height:86vh;margin:0 auto;border-radius:3px;background:#fff}
+dialog .cerrar{position:absolute;top:-2.6rem;right:0;background:var(--safety);color:#fff;border:0;border-radius:3px;font:600 1rem var(--body);padding:.4rem .9rem;cursor:pointer}
+dialog p{color:#fff;text-align:center;margin:.7rem 0 0}
+
+section.alt{background:var(--zinc);border-top:1px solid var(--line)}
+.cert.trabajo{border-top-color:var(--steel-2)}
+.cert .proyecto{margin:0;font-size:.95rem}
+.cert .periodo{font-family:var(--head);font-weight:700;font-size:1.2rem;line-height:1.1}
+footer{background:var(--steel);color:#c9d2d8;padding:2rem 0;font-size:.98rem}
+footer a{color:#fff}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Javier Neyra Mercado</h1>
+    <p class="rol">Técnico Líder de Andamios · Capataz Andamiero</p>
+    <p>Más de 20 años montando, desmontando e inspeccionando andamios, y liderando cuadrillas en proyectos de minería, petróleo y gas, y plantas industriales. Certificado como Persona Competente en Andamios de Sistema (SAIA). Trabajo con seguridad, calidad y productividad.</p>
+    <div class="btns">
+      <a class="btn primary" href="#cursos">Certificados de cursos</a>
+      <a class="btn" href="#trabajo">Certificados de trabajo</a>
+      <a class="btn" href="https://wa.me/51983564398" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<div class="datos">
+  <div class="wrap">
+    <ul>
+      <li><span>Teléfono:</span> <a href="tel:+51983564398">+51 983 564 398</a></li>
+      <li><span>Correo:</span> <a href="mailto:javierneyramercado@gmail.com">javierneyramercado@gmail.com</a></li>
+      <li><span>País:</span> Perú</li>
+    </ul>
+  </div>
+</div>
+
+<main>
+  <section id="cursos">
+    <div class="wrap">
+      <h2>Certificados de cursos</h2>
+      <p class="sub">Capacitaciones en andamios, seguridad y supervivencia. Toca un certificado para verlo en grande.</p>
+      <div class="grid" id="lista-cursos"></div>
+    </div>
+  </section>
+
+  <section id="trabajo" class="alt">
+    <div class="wrap">
+      <h2>Certificados de trabajo</h2>
+      <p class="sub">Constancias de experiencia laboral en empresas de minería, petróleo y gas, e ingeniería y construcción.</p>
+      <div class="grid" id="lista-trabajo"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Javier Neyra Mercado · Perú · <a href="mailto:javierneyramercado@gmail.com">javierneyramercado@gmail.com</a>
+  </div>
+</footer>
+
+<dialog id="visor" aria-label="Certificado ampliado">
+  <div class="caja">
+    <button class="cerrar" id="cerrar" type="button">Cerrar</button>
+    <img id="visorImg" alt="">
+    <p id="visorTxt"></p>
+  </div>
+</dialog>
+
+<script>
+/*
+  Las imágenes están en la carpeta "Images", junto a este index.html.
+  Acepta .jpg, .jpeg, .png, .webp (se ven en pantalla) y .pdf (se abre en otra pestaña).
+  Para agregar un certificado, copia una línea de la lista y cambia los datos.
+*/
+
+const cursos = [
+  { titulo:"Andamios Homologados BRIO – Técnico I", emisor:"ULMA Perú", fecha:"2024", detalle:"6 horas · Modalidad virtual", archivo:"Images/Ulma.jpg" },
+  { titulo:"Competent Person Training: System Scaffold", emisor:"SAIA / Safesi", fecha:"2023", detalle:"Persona Competente en Andamios de Sistema", archivo:"Images/Safesi.jpg" },
+  { titulo:"Entrenamiento para la Persona Competente en Andamios de Sistema", emisor:"SAIA / Climber", fecha:"2018", detalle:"", archivo:"Images/Climber.jpg" },
+  { titulo:"Supervivencia en Selva – Nivel Básico", emisor:"Supervivencia Delta", fecha:"2016", detalle:"6 horas", archivo:"Images/Delta.jpg" },
+  { titulo:"Formación Primaria de Andamios de Sistema", emisor:"SAIA / Climber", fecha:"2012", detalle:"", archivo:"Images/Climber2.jpg" },
+  { titulo:"Observaciones de Seguridad", emisor:"Pluspetrol Operaciones S.A.", fecha:"2005", detalle:"24 horas · Campamento Malvinas", archivo:"Images/Pluspetrol.jpg" }
+];
+
+const trabajo = [
+  // Para agregar un certificado faltante, copia una línea, cambia los datos y el nombre del archivo en la carpeta Images.
+  { titulo:"Capataz Andamiero", emisor:"Pentatech Construcción S.A.C.", fecha:"Abr 2026 – Jun 2026", detalle:"Obras civiles y montaje electromecánico, planta piloto industrial para filtración de relaves", archivo:"Images/Pentatech.jpg" },
+  { titulo:"Mecánico Andamiero", emisor:"Metso Perú S.A.", fecha:"Ago 2025 – Feb 2026", detalle:"", archivo:"Images/Metso.jpg" },
+  { titulo:"Andamiero", emisor:"Confipetrol Andina S.A.", fecha:"Ene 2025 – Abr 2025", detalle:"Pisco, Ica", archivo:"Images/Confipetrol4.jpg" },
+  { titulo:"Técnico Líder de Andamios", emisor:"Confipetrol Andina S.A.", fecha:"Nov 2023 – Nov 2024", detalle:"Pisco, Ica", archivo:"Images/Confipetrol5.jpg" },
+  { titulo:"Técnico Líder Andamiero", emisor:"Confipetrol Andina S.A.", fecha:"Jul 2023 – Nov 2023", detalle:"Malvinas, Cusco", archivo:"Images/Confipetrol.jpg" },
+  { titulo:"Técnico Líder Andamiero", emisor:"Confipetrol Andina S.A.", fecha:"Nov 2021 – Jun 2023", detalle:"Planta Malvinas, Cusco", archivo:"Images/Confipetrol3.jpg" },
+  { titulo:"Andamiero", emisor:"Confipetrol Andina S.A.", fecha:"Sep 2020 – May 2021", detalle:"Perú LNG, Cañete, Lima", archivo:"Images/Confipetrol2.jpg" },
+  { titulo:"Técnico Andamiero", emisor:"APTIM Perú S.A.C.", fecha:"Abr 2016 – Abr 2020", detalle:"Pluspetrol, Malvinas", archivo:"Images/Aptim.jpg" },
+  { titulo:"Técnico Andamiero", emisor:"CBI Peruana S.A.C.", fecha:"Desde Abr 2016", detalle:"Constancia de trabajo, junio 2017", archivo:"Images/CBI.jpg" },
+  { titulo:"Técnico Andamiero", emisor:"CBI Peruana S.A.C.", fecha:"Oct 2015 – Abr 2016", detalle:"Planta Perú LNG, Melchorita", archivo:"Images/CBI3.jpg" },
+  { titulo:"Técnico Andamiero", emisor:"CBI Peruana S.A.C.", fecha:"Jul 2015 – Sep 2015", detalle:"Planta Pluspetrol, Malvinas", archivo:"Images/CBI2.jpg" },
+  { titulo:"Operario Civil", emisor:"Wood Group Perú S.A.", fecha:"Feb 2010 – Sep 2013", detalle:"", archivo:"Images/WG.jpg" },
+  { titulo:"Esmerilador", emisor:"Constructora Azul Perú S.A.C.", fecha:"Nov 2008 – Abr 2009", detalle:"", archivo:"Images/Azul.jpg" },
+  { titulo:"Ayudante", emisor:"Skanska del Perú S.A.", fecha:"Ago 2006 – May 2008", detalle:"Lote 88 Camisea, Malvinas", archivo:"Images/Skanska.jpg" },
+  { titulo:"Obrero Ayudante de Gasfitería", emisor:"Sade Ingeniería y Construcciones (Skanska)", fecha:"Mar 2000 – Ago 2000", detalle:"Planta Tratamiento Crudo, Carrizo", archivo:"Images/Sade_Skanska.jpg" }
+];
+
+const visor = document.getElementById("visor");
+const visorImg = document.getElementById("visorImg");
+const visorTxt = document.getElementById("visorTxt");
+
+function esPdf(a){ return /\.pdf$/i.test(a); }
+
+function abrir(c){
+  if (esPdf(c.archivo)) { window.open(c.archivo, "_blank", "noopener"); return; }
+  visorImg.src = c.archivo;
+  visorImg.alt = "Certificado: " + c.titulo + " – " + c.emisor;
+  visorTxt.textContent = c.titulo + " – " + c.emisor + " (" + c.fecha + ")";
+  visor.showModal();
+}
+
+function vacio(texto){
+  const d = document.createElement("div");
+  d.className = "vacio";
+  d.innerHTML = "<b></b>";
+  d.querySelector("b").textContent = texto;
+  return d;
+}
+
+function pintar(idLista, datos, clase){
+  const lista = document.getElementById(idLista);
+  datos.forEach(function(c){
+    const art = document.createElement("article");
+    art.className = "cert " + clase;
+
+    const vista = document.createElement("button");
+    vista.type = "button";
+    vista.className = "vista";
+    vista.setAttribute("aria-label", "Ver certificado: " + c.titulo + " – " + c.emisor);
+
+    if (esPdf(c.archivo)) {
+      vista.appendChild(vacio("PDF"));
+    } else {
+      const img = document.createElement("img");
+      img.src = c.archivo;
+      img.alt = "Certificado: " + c.titulo + " – " + c.emisor;
+      img.loading = "lazy";
+      img.onerror = function(){ vista.replaceChildren(vacio("Certificado")); };
+      vista.appendChild(img);
+    }
+    vista.addEventListener("click", function(){ abrir(c); });
+
+    const cuerpo = document.createElement("div");
+    cuerpo.className = "cuerpo";
+    const h3 = document.createElement("h3"); h3.textContent = c.titulo;
+    const em = document.createElement("p"); em.className = "emisor"; em.textContent = c.emisor;
+    cuerpo.append(h3, em);
+    if (c.detalle) {
+      const d = document.createElement("p"); d.className = "proyecto"; d.textContent = c.detalle;
+      cuerpo.appendChild(d);
+    }
+    const meta = document.createElement("div"); meta.className = "meta";
+    const f = document.createElement("span"); f.className = clase === "trabajo" ? "periodo" : "anio"; f.textContent = c.fecha;
+    const ver = document.createElement("button"); ver.type = "button"; ver.className = "ver";
+    ver.textContent = esPdf(c.archivo) ? "Abrir PDF" : "Ver certificado";
+    ver.addEventListener("click", function(){ abrir(c); });
+    meta.append(f, ver);
+    cuerpo.appendChild(meta);
+
+    art.append(vista, cuerpo);
+    lista.appendChild(art);
+  });
+}
+
+pintar("lista-cursos", cursos, "curso");
+pintar("lista-trabajo", trabajo, "trabajo");
+
+document.getElementById("cerrar").addEventListener("click", function(){ visor.close(); });
+visor.addEventListener("click", function(e){ if (e.target === visor) visor.close(); });
+</script>
+</body>
+</html>
